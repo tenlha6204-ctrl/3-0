@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  .mask-fade-right {
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+  }
+}
+
+body {
+  @apply bg-[#050505] text-slate-300;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.performance-header {
+  @apply bg-black/40 backdrop-blur-md border-b border-white/5;
+}
+
+.pedal-rack-item {
+  @apply border rounded-lg p-5 flex flex-col items-center gap-4 transition-all duration-300;
+}
